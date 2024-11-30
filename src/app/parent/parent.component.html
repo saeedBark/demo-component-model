@@ -1,0 +1,20 @@
+<h1>Parent Companent</h1>
+<div>
+    <h3>Ajouter user</h3>
+    <label>
+        id:
+        <input type="number" [(ngModel)]="userId" placeholder="ajouter id">
+    </label>
+    <label>
+        age:
+        <input type="number" [(ngModel)]="userAge" placeholder="ajouter age">
+    </label>
+    <label>
+        name:
+        <input type="text" [(ngModel)]="userName" placeholder="ajouter name">
+    </label>
+    <button (click)="addUser()">Ajouter</button>
+</div>
+
+
+<app-child *ngFor="let user of users" [user]="user" (selectedUserId)="onDeleteCall($event)"></app-child>
