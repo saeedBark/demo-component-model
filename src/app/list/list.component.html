@@ -1,0 +1,22 @@
+<div class="user-list">
+    <table>
+        <thead>
+            <th>id user</th>
+            <th>name user</th>
+            <th>age user</th>
+            <th>action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let user of userList">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td><button [routerLink]="['/child',user.id]" style="margin: 10px;">Details</button>
+                    <button [routerLink]="['/parent',user.id]">edit</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

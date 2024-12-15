@@ -1,0 +1,49 @@
+/* General Navbar Styling */
+nav {
+    background-color: #FFC107; /* Amber background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px; /* Optional: Limit the width of the navbar */
+}
+
+/* Navbar Links */
+.navbar-link {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effects */
+.navbar-link:hover {
+    background-color: #FFA000; /* Darker amber on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active Link Styling */
+.active {
+    background-color: #795548; /* Brown for active link */
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        padding: 15px;
+    }
+
+    .navbar-link {
+        margin: 10px 0; /* Add vertical spacing between links */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}

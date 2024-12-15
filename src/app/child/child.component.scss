@@ -1,0 +1,83 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* User Information Container */
+div {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text and buttons */
+}
+
+/* Headings for User Info */
+h1 {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Buttons */
+button {
+    background: #FFC107; /* Amber for primary action */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #FFA000; /* Darker amber for hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Specific Styles for Buttons */
+button:first-of-type {
+    background: #E53935; /* Red for delete action */
+}
+
+button:first-of-type:hover {
+    background: #C62828; /* Darker red for hover */
+}
+
+button:last-of-type {
+    background: #4CAF50; /* Green for update action */
+}
+
+button:last-of-type:hover {
+    background: #388E3C; /* Darker green for hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    div {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}

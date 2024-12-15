@@ -1,0 +1,81 @@
+/* User List Container */
+.user-list {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/* Table Head */
+thead {
+    background-color: #FFC107; /* Amber background */
+    color: #fff;
+}
+
+thead th {
+    padding: 10px;
+    text-transform: capitalize; /* Capitalize headers for consistency */
+}
+
+/* Table Body */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #FFF8E1; /* Light amber for hover */
+}
+
+tbody td {
+    padding: 10px;
+    color: #333;
+}
+
+/* Action Button */
+button {
+    background-color: #4CAF50; /* Green for action */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #388E3C; /* Darker green for hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Subtle press effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    thead th, tbody td {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
