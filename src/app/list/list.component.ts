@@ -19,4 +19,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.userList = this.userService.getUsers();
   }
+
+  deleteUser(userId: number) {
+    this.userList = this.userList.filter(user => user.id !== userId);
+  }
 }

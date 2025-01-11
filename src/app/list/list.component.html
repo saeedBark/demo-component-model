@@ -12,7 +12,8 @@
                 <td>{{user.name}}</td>
                 <td>{{user.age}}</td>
                 <td><button [routerLink]="['/child',user.id]" style="margin: 10px;">Details</button>
-                    <button [routerLink]="['/parent',user.id]">edit</button>
+                    <button [routerLink]="['/parent',user.id]"style="margin: 10px;">edit</button>
+                    <button (click)="deleteUser(user.id)" style="background-color: red;">delete</button>
                 </td>
 
             </tr>
