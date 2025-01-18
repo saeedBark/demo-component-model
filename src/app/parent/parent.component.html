@@ -20,6 +20,14 @@
                 <p *ngIf="userForm.get('age')?.hasError('minLength')"> user name less than 3</p>
             </div>
         </div>
+        <div class="form-group">
+            <label for="salaryUser">User salary</label>
+            <input type="text" id="salaryUser" formControlName="salary">
+            <div *ngIf="userForm.get('salary')?.invalid && userForm.get('salary')?.touched">
+                <p *ngIf="userForm.get('salary')?.hasError('required')"> user age is required</p>
+                <p *ngIf="userForm.get('salary')?.hasError('minLength')"> user name less than 3</p>
+            </div>
+        </div>
         <button type="submit" class="update-btn" [disabled]="userForm.invalid">
             {{isOnEditUser?'Update User' : 'Add user'}}</button>
     </form>

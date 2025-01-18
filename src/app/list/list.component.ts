@@ -17,7 +17,16 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userList = this.userService.getUsers();
+    this.userService.loadUsers().subscribe( {
+      next: (val) =>{
+        this.userList = this.userService.getUsers();
+      },
+      error: (val) =>{
+        //this.userList = this.userService.getUsers();
+      }
+    }
+
+    )   
   }
 
   deleteUser(userId: number) {

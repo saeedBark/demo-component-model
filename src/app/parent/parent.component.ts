@@ -15,6 +15,7 @@ export class ParentComponent implements OnInit {
   users: User[] = [];
   userName: string = '';
   userAge: number | null = null;
+  userSalary: number | null = null;
   userId: number | null = null;
   private userNextId = 1;
 
@@ -30,6 +31,7 @@ export class ParentComponent implements OnInit {
     this.userForm = this.fb.group({
       name: ['', [Validators.required, Validators.maxLength(20)]],
       age: ['', [Validators.required, Validators.maxLength(2)]],
+      salary: ['', [Validators.required, Validators.maxLength(2)]],
     });
   }
 
@@ -59,6 +61,7 @@ export class ParentComponent implements OnInit {
           id: this.editUserIdValue,
           name: userFormValue.name,
           age: userFormValue.age,
+          salary: userFormValue.salary,
         });
       } else {
         const userInit = {
@@ -83,7 +86,7 @@ export class ParentComponent implements OnInit {
     if (userEdit) {
       this.isOnEditUser = true;
       this.editUserIdValue = userId;
-      this.userForm.setValue({ name: userEdit.name, age: userEdit.age });
+      this.userForm.setValue({ name: userEdit.name, age: userEdit.age,salary:userEdit.salary });
     }
   }
 
@@ -111,5 +114,6 @@ export class ParentComponent implements OnInit {
     this.userId = null;
     this.userName = '';
     this.userAge = null;
+    this.userSalary;
   }
 }

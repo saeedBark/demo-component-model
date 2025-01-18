@@ -4,6 +4,7 @@
             <th>id user</th>
             <th>name user</th>
             <th>age user</th>
+            <th>salary user</th>
             <th>action</th>
         </thead>
         <tbody>
@@ -11,6 +12,7 @@
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.age}}</td>
+                <td>{{user.salary}}</td>
                 <td><button [routerLink]="['/child',user.id]" style="margin: 10px;">Details</button>
                     <button [routerLink]="['/parent',user.id]"style="margin: 10px;">edit</button>
                     <button (click)="deleteUser(user.id)" style="background-color: red;">delete</button>
